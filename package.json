@@ -6,7 +6,7 @@
     "build": "tsc",
     "test": "jest",
     "cdk:synth": "cdk synth",
-    "cdk:deploy": "cdk deploy --context accountId=448878779811 --context region=eu-west-3"
+    "cdk:deploy": "tsc && cdk deploy --context accountId=448878779811 --context region=eu-west-3"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.120.0",
