@@ -1,5 +1,5 @@
 
-import { v4 as uuid } from 'uuid';
+import { randomUUID } from 'node:crypto';
 import { ItemRepository } from '../repositories/itemRepository';
 import { Item } from '../models/Item';
 
@@ -8,7 +8,7 @@ export class ItemService {
 
   async create(name: string): Promise<Item> {
     const item: Item = {
-      id: uuid(),
+      id: randomUUID(),
       name,
       createdAt: new Date().toISOString()
     };
