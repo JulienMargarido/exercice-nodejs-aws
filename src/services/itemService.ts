@@ -10,7 +10,7 @@ export class ItemService {
     const item: Item = {
       id: randomUUID(),
       name,
-      createdAt: new Date().toISOString()
+      createdAt: new Date()
     };
 
     await this.repo.save(item);
